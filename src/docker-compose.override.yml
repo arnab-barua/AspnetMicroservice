@@ -36,6 +36,13 @@ services:
     ports:
       - "1433:1433"
 
+  rabbitmq:
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5678:5672"
+      - "15678:15672"
+
   catalog.api:
     container_name: catalog.api
     environment:
